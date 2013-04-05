@@ -6,55 +6,61 @@
 
     <!-- HTML 5 shim -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- CSS styles -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   </head>
 
-  <body class="container">
+  <body class="container" data-spy="scroll">
 
     <style type="text/css">
+      body
+      {
+        padding-top: 42px;
+      }
       .turne-w
       {
         width: 80px;
         height: 20px;
         line-height: 20px;
         position: absolute;
-cursor: help;
+        cursor: help;
       }
       .turne-h 
       {
         width: 15px;
-        height: 80px;
+        height: 90px;
         position: absolute;
-cursor: help;
+        cursor: help;
       }
       .cuisine
-{
-width: 45px;
-height: 20px;
+      {
+        width: 45px;
+        height: 20px;
         line-height: 20px;
-position: absolute;
-}
-.toilettes
-{
-width: 15px;
-height: 80px;
-position: absolute;
-}
-.toilettes .turne-content
-{
-position: absolute;
-          -webkit-transform: rotate(-90deg) translate(-40px, -15px);
-}
+        position: absolute;
+      }
+      .toilettes
+      {
+        width: 15px;
+        height: 80px;
+        position: absolute;
+      }
+      .toilettes .turne-content
+      {
+        position: absolute;
+        -webkit-transform: rotate(-90deg) translate(-40px, -15px);
+        -moz-transform: rotate(-90deg) translate(-40px, -15px);
+        transform: rotate(-90deg) translate(-40px, -15px);
+      }
       .turne-h .turne-content
       {
         position: absolute;
-        -webkit-transform: rotate(-90deg) translate(-50px, -10px);
-        -moz-transform: rotate(-90deg) translate(-50px, -10px);
-        transform: rotate(-90deg) translate(-50px, -10px);
+        -webkit-transform: rotate(-90deg) translate(-50px, -16px);
+        -moz-transform: rotate(-90deg) translate(-50px, -16px);
+        transform: rotate(-90deg) translate(-50px, -16px);
       }
       .turne-h > .badge
       {
@@ -62,10 +68,10 @@ position: absolute;
         right: 0;
         top: 0;
         -webkit-transform-origin: bottom;
+        -moz-transform-origin: bottom;
+        transform-origin: bottom;
         -webkit-transform: rotate(-90deg) translate(0, 10px);
-        -moz-transform-origin: bottom;
-        -moz-transform-origin: bottom;
-        transform: rotate(-90deg) translate(0, 10px);
+        -moz-transform: rotate(-90deg) translate(0, 10px);
         transform: rotate(-90deg) translate(0, 10px);
       }
       .turne-w > .badge
@@ -83,21 +89,38 @@ position: absolute;
     </style>
 
     <header>
-      <h1 class="page-header">Informations utiles au turnage 2012
-        <small>Montrouge seulement, cliquez sur les bannières</small>
-      </h1>
+    <h1 class="page-header">Informations utiles au turnage 2012
+      <small>Montrouge seulement, peut-être plus à venir</small>
+    </h1>
     </header>
 
-    <h4>Légende</h4>
-      <span class="label" style="background-color: darkred">Très mauvais état</span>
-      <span class="label" style="background-color: red">Mauvais état</span>
-      <span class="label" style="background-color: orange">État moyen</span>
-      <span class="label" style="background-color: green">Bon état</span>
-      <span class="label" style="background-color: darkgreen">Très bon état</span>
-      <span class="label" style="background-color: black">Garde-turne (indisponible)</span>
-      <span class="label" style="background-color: grey">Pas de données disponibles</span>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">
+            Thurnes ENS
+          </a>
+          <ul class="nav">
+            <li><a href="#MB">Tour B (Montrouge)</a></li>
+            <li><a href="#MC">Tour C (Montrouge)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-      <div style="height: 10px;"></div>
+    <h4>Légende</h4>
+    <span class="label" style="background-color: darkred">Très mauvais état</span>
+    <span class="label" style="background-color: red">Mauvais état</span>
+    <span class="label" style="background-color: orange">État moyen</span>
+    <span class="label" style="background-color: green">Bon état</span>
+    <span class="label" style="background-color: darkgreen">Très bon état</span>
+    <span class="label" style="background-color: black">Garde-turne (indisponible)</span>
+    <span class="label" style="background-color: grey">Pas de données disponibles</span>
+    <br />
+    <i class="icon-user"></i> Chambre occupée
+    <i class="icon-ok"></i> Chambre libre
+
+    <div style="height: 10px;"></div>
 
     {0}
 
@@ -111,6 +134,6 @@ position: absolute;
           {
           $('[rel=popover]').popover({'placement': 'bottom'});
           });
-    </script>
+</script>
   </body>
 </html>
