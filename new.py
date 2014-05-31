@@ -126,7 +126,7 @@ class convert:
 troisieme_erasme = \
 convert("EE0|122\n" + \
         "EE   22", [24, 22, 20]) + [\
-convert("  00 11", [13 + 2 * i, 6 + 2 * i]) for i in range(6)] + \
+convert("  00 11", [25 - 2 * i, 18 - 2 * i]) for i in range(7)] + \
 convert("  00 DDDDTTT\n" + \
         "  11 DDDDEEE\n" + \
         "  22     EEE\n" + \
@@ -219,4 +219,4 @@ jourdanD2 = \
     convert("0\n-\n-\n1", [56 - 2 * i, 59 - 2 * i]) for i in range(6)] * \
     convert("0\n-\n-\nE", [44])
 
-print(str(jourdanD0).format('JD1'))
+print(str(troisieme_rataud).format('R3'))
