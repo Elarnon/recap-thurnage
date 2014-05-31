@@ -219,4 +219,43 @@ jourdanD2 = \
     convert("0\n-\n-\n1", [56 - 2 * i, 59 - 2 * i]) for i in range(6)] * \
     convert("0\n-\n-\nE", [44])
 
-print(str(troisieme_rataud).format('R3'))
+all_thurnes = {
+  'ulm': [
+    ('Annexe', [
+      ('Premier étage', 'A1', annexe1),
+      ('Deuxième étage', 'A2', annexe234),
+      ('Troisième étage', 'A3', annexe234),
+      ('Quatrième étage', 'A4', annexe234),
+    ]),
+
+    ('Troisième étage du 45', [
+      ('Troisième Érasme', 'E3', troisieme_erasme),
+      ('Couloir Vert', 'C3', couloir_vert),
+      ('Troisième Rataud', 'R3', troisieme_rataud),
+    ]),
+
+    ('NIR', [
+      ('Deuxième étage', 'IR2', nir24),
+      ('Troisième étage', 'IR3', nir3),
+      ('Quatrième étage', 'IR4', nir24),
+    ]),
+    ],
+
+  'jourdan': [
+    ('Pavillon D', [
+      ('Rez-de-chaussée', 'JD1', jourdanD0),
+      ('Premier étage', 'JD1', jourdanD1),
+      ('Deuxième étage', 'JD1', jourdanD2),
+    ]),
+    ]
+}
+
+import os
+root = 'output'
+for location in all_thurnes:
+  buildings = all_thurnes[location]
+  for name, thurnes in buildings:
+    os.makedirs(os.path.join(root, location, name), exist_ok=True)
+    for label, prefix, info in thurnes:
+      with open(os.path.join(root, location, name, label + '.html'), 'w') as f:
+        f.write(str(info).format(prefix))
