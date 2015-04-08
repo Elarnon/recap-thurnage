@@ -1,173 +1,4 @@
-from bs4 import BeautifulSoup#{{{
-import urllib.request
-import re
-import copy#}}}
-
-
-from jinja2 import Environment, FileSystemLoader
-env = Environment(loader=FileSystemLoader('./templates/'))
-
-class comment:#{{{
-  def __init__(self, author, year, state, mezza, volets, rideaux, text):
-    # Compute comment tags
-    infos = [{ 'color': state['color'], 'text': state['name'] }]
-    self.mezza = False
-    if mezza != 'Non':
-      self.mezza = True
-      infos.append({ 'color': 'green', 'text': 'Mezzanine ' + mezza })
-    if volets:
-      infos.append({ 'color': 'green', 'text': 'Volets' })
-    if rideaux:
-      infos.append({ 'color': 'green', 'text': 'Rideaux' })
-    # Store
-    self.author = author
-    self.year = int(year)
-    self.state = state
-    self.text = text
-    self.infos = infos
-
-  def __str__(self):
-    html = '<blockquote>'
-    for info in self.infos:
-      html += '''
-      <span class="label" style="background-color: {info[color]}">
-        {info[text]}
-      </span>
-      '''.format(info=info)
-    html += self.text
-    html += '<small>{0.author}, {0.year}</small>'.format(self)
-    html += '</blockquote>'
-    return html#}}}
-
-state_of_class = {#{{{
-    'bon':         { 'color': 'green'    , 'name': 'Bon état'          },
-    'moyen':       { 'color': 'orange'   , 'name': 'État moyen'        },
-    'mauvais':     { 'color': 'red'      , 'name': 'Mauvais état'      },
-    'tresbon':     { 'color': 'darkgreen', 'name': 'Très bon état'     },
-    'tresmauvais': { 'color': 'darkred'  , 'name': 'Très mauvais état' },
-    }#}}}
-
-def parse_comments(thurnes, html_doc):#{{{
-  for table in html_doc.find_all('table'):
-    for tr in table.find_all('tr'):
-      tds = tr.find_all('td', recursive=False)
-      if len(tds) == 8: # Check it really is informations about a room
-        name = thurne.normalize_name(tds[0].string, mezza=tds[4].string)
-        # Check thurne is in the database
-        if not name in thurnes:
-          print("Unknown thurne ", tds[0].string, name, tds[4].string)
-          continue
-        # Parse data
-        author = tds[1].string
-        year = int(tds[2].string)
-        state = state_of_class[tds[3].find('span')['class'][0]]
-        mezza = tds[4].string
-        volets = tds[5].string == 'Oui'
-        rideaux = tds[6].string == 'Oui'
-        text = tds[7].string
-        # Create comment object
-        thurnes[name].comments.append(
-            comment(author, year, state, mezza,
-              volets, rideaux, text)
-            )#}}}
-
-def parse_results(dic, html_doc):#{{{
-  tbl = html_doc.find_all(text=re.compile('Choix des'))[0].parent.find_next_sibling('table')
-  for child in tbl.find_all('tr'):
-    tds= child.find_all('td', recursive=False)
-    if len(tds) == 4 and tds[2].string != None:
-      name = thurne.normalize_name(tds[2].string)
-      if name not in dic:
-        continue
-      person = tds[1].string
-      dic[name].owner = person#}}}
-
-
-## START ANEW
-
-class thurne:
-  template = env.get_template('thurne.html')
-  def __init__(self, name, left, top, width, height):
-    self.special = False
-    self.name = name
-    self.vertical = height > width
-    self.removed = False
-    self.rank = None
-    # if height > width:
-    #   width = 15/40.
-    # elif width > height:
-    #   height = 0.5
-    self.position = (left * 1.5, top * 1.5, width, height)
-    self.comments = []
-    self.owner = None
-
-  def zoom(self, k):
-    left, top, width, height = self.position
-    left *= k
-    top *= k
-    width *= k
-    height *= k
-    self.position = (left, top, width, height)
-
-  def __str__(self):
-    # Trie les commentaires avec les plus récents en premier
-    self.comments.sort(key=lambda comment: comment.year, reverse=True)
-    # L'état de la chambre est l'état donné par le dernier commentaire, si présent
-    state = { 'color': 'grey', 'name': 'État inconnu' }
-    if len(self.comments) > 0 and self.comments[0].year > 2009: # TODO: current_year - 4
-      state = self.comments[0].state
-    mezza = False
-    if len(self.comments) > 0:
-      mezza = self.comments[0].mezza
-    color = state['color']
-    # Informations sur l'occupant de la chambre
-    info = ''
-    # Génération du HTML
-    (left, top, width, height) = self.position
-    return thurne.template.render(
-      top=top, left=left, width=width, height=height,
-      color=color, name=self.name, state=state['name'],
-      comments=self.comments, owner=self.owner, vertical=self.vertical,
-      mezza=mezza, removed=self.removed, rank=self.rank)
-
-  def normalize_name(name, mezza=None):
-    """ Discard spaces and truncates a string to 5 characters, the
-    common name format for rooms.  """
-    res = name.replace(' ', '').replace('-', '').replace(';', '')[:5].upper()
-    res = res.rstrip(''.join(chr(i) for i in range(ord('A'), ord('Z'))))
-    if re.match(r"^[A-Z][0-9]{,3}$", res):
-      if mezza is not None and 'non' not in mezza.lower():
-        res = "U" + res
-      elif res[0] == 'A' or res[0] == 'R':
-        res = "U" + res
-    elif re.match(r"^[0-9]{,3}$", res) and mezza is not None and 'non' not in mezza.lower():
-      res = "UC" + res
-    return res
-
-class thurnes:
-  template = env.get_template('thurnes.html')
-  def __init__(self, label, prefix, data, width, height):
-    self.label = label
-    self.prefix = prefix
-    self.thurnes = data
-    self.width = width * 1.5
-    self.height = height * 1.5
-
-  def zoom(self, k):
-    self.width *= k
-    self.height *= k
-    for thurne in self.thurnes:
-      thurne.zoom(k)
-
-  def __str__(self):
-    nb_thurnes = 0
-    for thurne in self.thurnes:
-      if not thurne.special:
-        nb_thurnes += 1
-    return thurnes.template.render(
-      width=self.width, height=self.height, label=self.label, thurnes=self.thurnes,
-      nb_thurnes=nb_thurnes
-    )
+import copy
 
 def addx(l, x):
   ll = []
@@ -181,49 +12,33 @@ def addy(l, y):
     ll.append([[x0, y0 + y], [x1, y1 + y], z])
   return ll
 
-class special:
-  template = env.get_template("special.html")
-  def __init__(self, name, left, top, width, height):
-    self.special = True
-    self.left = left * 1.5
-    self.top = top * 1.5
-    self.width = width
-    self.height = height
-    self.name = name
-
-  def zoom(self, k):
-    self.left *= k
-    self.top *= k
-    self.width *= k
-    self.height *= k
-
-  def __str__(self):
-    vertical = self.height > self.width
-    return special.template.render(
-      top=self.top, left=self.left, width=self.width, height=self.height,
-      name=self.name, vertical=vertical)
-    
-specials = {
-  'E': "Escaliers",
-  'T': "Toilettes",
-  'S': "Sanitaires",
-  'X': "Autres",
-  'D': "Douches",
-  'C': "Cuisine",
-}
 
 class convert:
-  def to_thurnes(self, label, prefix):
-    res = []
+  def to_paths(self, prefix):
+    pathes = {}
+    pad = 0.1
     for [ [ left, top ], [ right, bottom ], ( is_special, name ) ] in self.data:
-      width = right - left
-      height = bottom - top
-      if is_special:
-        res.append(special(specials[name], left=left, top=top, width=width, height=height))
-      else:
-        fullname = name if prefix == '' else '{}{:02}'.format(prefix, name)
-        res.append(thurne(name=fullname, left=left, top=top, width=width, height=height))
-    return thurnes(label, prefix, res, width=self.maxx, height=self.maxy)
+      left += pad
+      top += pad
+      if not is_special:
+        width = right - left
+        height = bottom - top
+        path = "M{left},{top}l{width},0l0,{height}l-{width},0l0,-{height}".format(
+            left=left*1.1, top=top*1.1, width=width, height=height
+        )
+        if prefix == '':
+          realname = name
+        else:
+          realname = "{}{:02}".format(prefix, name)
+        pathes[realname] = {
+          "name": realname,
+          "path": path
+        }
+    return {
+        "width": 2 * pad + self.maxx * 1.1,
+        "height": 2 * pad + self.maxy * 1.1,
+        "paths": pathes
+    }
 
   def __init__(self, s, r=[]):
     arr = []
@@ -536,7 +351,7 @@ jourdanD2 = \
 removed = [ 'UR202', 'IR319', 'IR323', 'UC204' ]
 
 all_thurnes = {
-  'Ulm (115 thurnes disponibles)': [
+  'Ulm': [
     ('Annexe', [
       ('Premier étage', 'UA1', annexe1),
       ('Deuxième étage', 'UA2', annexe23),
@@ -565,7 +380,7 @@ all_thurnes = {
     ]],
     ],
 
-  'Jourdan (23 thurnes disponibles)': [
+  'Jourdan': [
     ('Pavillon D', [
       ('Rez-de-chaussée', 'JD1', jourdanD0),
       ('Premier étage', 'JD1', jourdanD1),
@@ -581,65 +396,11 @@ all_thurnes = {
 
 step = 50
 
-# Database creation
-tinfo = {}
+import json
+
 for location in all_thurnes:
-  tinfo[location] = []
   buildings = all_thurnes[location]
   for name, floors in buildings:
-    new_floors = []
-    tinfo[location].append((name, new_floors))
     for label, prefix, plan in floors:
-      new_thurnes = (plan.to_thurnes(label, prefix))
-      new_thurnes.zoom(35)
-      new_floors.append(new_thurnes)
-    new_floors.sort(key=lambda thurnes: thurnes.prefix)
-  tinfo[location].sort(key=lambda x: x[0])
-
-dic = {}
-for location in tinfo:
-  buildings = tinfo[location]
-  for name, floors in buildings:
-    for rooms in floors:
-      for th in rooms.thurnes:
-        # TODO: Check special.
-        th.removed = th.name in removed
-        dic[th.name] = th
-
-# État des chambres#{{{
-url = urllib.request.urlopen('http://www.dg.ens.fr/thurnage/EtatChambre.html')
-html_doc = BeautifulSoup(url.read().decode('utf8'))
-url.close()
-
-# Résultats !!!!#{{{
-url = urllib.request.urlopen('http://www.dg.ens.fr/thurnage/2013/resultats-classement.html')
-html_doc3 = BeautifulSoup(url.read().decode('utf8'))
-url.close()
-
-parse_results(dic, html_doc3)#}}}
-
-parse_comments(dic, html_doc)#}}}
-
-with open('rank') as ranks:
-  nth = 1
-  for line in ranks:
-    [ name, rank ] = line.strip().split(':')
-    name = name.strip()
-    rank = round(float(rank.strip()), 1)
-    if name in dic:
-      dic[name].rank = '{}'.format(nth)
-    nth += 1
-
-# Manual beautification
-for location in tinfo:
-  buildings = tinfo[location]
-  for name, floors in buildings:
-    if name == "NIR":
-      st = '<div class=span{}">'.format(12 / len(floors))
-      en = '</div>'
-      floors[:] = [st + (en + st).join(str(floor) for floor in floors) + en]
-
-html = env.get_template('index.html')
-for location in tinfo:
-  with open('output/' + location + '.html', 'w') as output:
-    output.write(html.render(buildings=tinfo[location], where=location))
+      with open("maps/{}_{}_{}.json".format(location, name, label), 'w') as f:
+        json.dump(plan.to_paths(prefix), f)

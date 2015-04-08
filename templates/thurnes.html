@@ -1,0 +1,10 @@
+<div class="well" style="margin: auto; width: {{ width }}px;">
+  <div style="width: {{ width }}px; height: {{ height }}px; position: relative;">
+    {% for thurne in thurnes %}
+    {{ thurne }}
+    {% endfor %}
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    {{ label }} ({{ nb_thurnes }} chambres)
+  </div>
+</div>

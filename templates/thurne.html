@@ -1,0 +1,9 @@
+<div style="top: {{ top }}px; left: {{ left }}px; width: {{ width }}px; height: {{ height }}px; background-color: {{ color }};"
+     class="label {% if vertical %}thurne-h{% else %}thurne-w{% endif %} {% if mezza %}mezza{% endif %}"
+     title="{{ name }} ({{ state }}){% if rank is not none %} - Classement : {{ rank }}{% endif %}" rel="popover"
+     data-content="{{ comments|map('string')|join('')|e }}{% if owner is not none %} Occupé par {{ owner|e }}.{% endif %}">
+  <div class="thurne-content">
+    {{ name }}<i class="{% if removed %}icon-remove{% elif owner %}icon-user{% else %}icon-ok{% endif %}"></i>
+  </div>
+  <span class="badge badge-info">{{ comments|length }}</span>
+</div>

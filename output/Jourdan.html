@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Récapitulatif TG 2014</title>
+
+    <!-- HTML 5 shim -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- CSS styles -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="container">
+
+    <style type="text/css">
+      body
+      {
+        padding-top: 42px;
+      }
+      .thurne-h, .thurne-w
+      {
+        line-height: 20px;
+        position: absolute;
+        cursor: help;
+      }
+      .special
+      {
+        text-align: center;
+        background-color: darkorchid;
+        cursor: default;
+        line-height: 20px;
+        position: absolute;
+      }
+      .special.vertical .thurne-content {
+        position: absolute;
+        -webkit-transform: rotate(-90deg) translate(-17px, -10px);
+        -moz-transform: rotate(-90deg) translate(-17px, -10px);
+        transform: rotate(-90deg) translate(-17px, -10px);
+      }
+      .cuisine
+      {
+        width: 45px;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
+      }
+      .toilettes
+      {
+        width: 15px;
+        height: 80px;
+        position: absolute;
+      }
+      .toilettes .thurne-content
+      {
+        position: absolute;
+        -webkit-transform: rotate(-90deg) translate(-40px, -15px);
+        -moz-transform: rotate(-90deg) translate(-40px, -15px);
+        transform: rotate(-90deg) translate(-40px, -15px);
+      }
+      .mezza
+      {
+        border: 2px solid #cfa700;
+        box-shadow: 0 0 0.7em #cfa700;
+        border-radius: 4px;
+        margin: -2px;
+      }
+      .thurne-h .thurne-content
+      {
+        position: absolute;
+        -webkit-transform: rotate(-90deg) translate(-17px, -17px);
+        -moz-transform: rotate(-90deg) translate(-17px, -17px);
+        transform: rotate(-90deg) translate(-17px, -17px);
+      }
+      .thurne-w > .badge
+      {
+        position: absolute;
+        right: 0;
+        bottom: 3px;
+      }
+      .thurne-h > .badge
+      {
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transform-origin: bottom;
+        -moz-transform-origin: bottom;
+        transform-origin: bottom;
+        -webkit-transform: rotate(-90deg) translate(0, 10px);
+        -moz-transform: rotate(-90deg) translate(0, 10px);
+        transform: rotate(-90deg) translate(0, 10px);
+      }
+      .popover-inner
+      {
+        width: auto ! important;
+        min-width: 280px;
+        max-width: 500px;
+      }
+    </style>
+
+    <header>
+    <h1 class="page-header">Informations utiles au thurnage 2014 <small>Jourdan (23 thurnes disponibles)</small></h1>
+    </header>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">
+            Thurnes ENS
+          </a>
+          <ul class="nav">
+	    <li><a href="Ulm.html">Ulm (115 thurnes)</a></li>
+	    <li><a href="Jourdan.html">Jourdan (34 thurnes)</a></li>
+            <li><a href="Montrouge.html">Montrouge (175 thurnes)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h4>Légende</h4>
+    <span class="label" style="background-color: darkred">Très mauvais état</span>
+    <span class="label" style="background-color: red">Mauvais état</span>
+    <span class="label" style="background-color: orange">État moyen</span>
+    <span class="label" style="background-color: green">Bon état</span>
+    <span class="label" style="background-color: darkgreen">Très bon état</span>
+    <span class="label mezza" style="background-color: green;">Présence de mezzanine</span>
+    <span class="label" style="background-color: grey">Pas de données récentes</span>
+    <br />
+    <i class="icon-user"></i> Chambre occupée
+    <i class="icon-ok"></i> Chambre disponible au thurnage
+    <i class="icon-remove"></i> Chambre non disponible au thurnage
+
+
+    <br/><br/>
+    <strong>Ces pages ont été crées pour rassembler dans un format
+      plus pratique les différentes informations publiquement
+      disponibles sur <a href="http://www.dg.ens.fr/thurnage/">le site
+      de la DG</a>. Malgré tout le soin apporté au rassemblement de ces résultats, des erreurs et/ou omissions peuvent s'y être glissées et je ne garantie en aucun cas leur exactitude.
+      </strong>
+
+      <br />
+
+      En particulier, l'état indiqué des thurnes, ainsi que la
+      présence de Mezzanine, se base sur
+      les <a href="http://www.dg.ens.fr/thurnage/EtatChambre.html">commentaires</a>
+      des 4 dernières années, mais ne tiens pas compte d'éventuels
+      travaux s'il n'y a pas eu de commentaire depuis - souvenez-vous
+      en si vous regardez les chambres en Rataud, notamment. Vous
+      pouvez lire les commentaires complets (avec la date) en
+      survolant la chambre avec votre souris.
+
+    <br /> Le classement est une indication de la popularité de la
+    thurne calculé à partir du classement des personnes ayant choisi
+    cette thurne au TG depuis 2007.
+
+      <br />
+
+      Merci à Abel Lacabanne pour avoir importé le plan des chambres
+      d'Ulm et Jourdan, et merci à Guillaume Bury pour son script
+      calculant le rang moyen des thurnes.
+    <div style="height: 5px;"></div>
+
+    
+    <h2 class="page-header" style="padding-top: 42px;">Pavillon D</h2>
+    <div class="thurnes">
+      
+      <div class="row" style="margin-bottom: 10px;">
+	<div class="well" style="margin: auto; width: 420.0px;">
+  <div style="width: 420.0px; height: 210.0px; position: relative;">
+    
+    <div style="top: 0.0px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Cuisine</div>
+</div>
+    
+    <div style="top: 0.0px; left: 52.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Douches</div>
+</div>
+    
+    <div style="top: 0.0px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD128 (État inconnu) - Classement : 514" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD128<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 0.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD135 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD135<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 52.5px; width: 70px; height: 52.5px;"
+     class="special  label">
+  <div class="thurne-content">Autres</div>
+</div>
+    
+    <div style="top: 0.0px; left: 157.5px; width: 35px; height: 52.5px; background-color: red;"
+     class="label thurne-h "
+     title="JD126 (Mauvais état) - Classement : 233" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: red&#34;&gt;
+        Mauvais état
+      &lt;/span&gt;
+      Bonne ambiance. &lt;small&gt;Jianfeng Yao, 2010&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD126<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD129 (État inconnu) - Classement : 390" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD129<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD124 (État inconnu) - Classement : 462" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD124<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD127 (État inconnu) - Classement : 257" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD127<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 262.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD122 (Bon état) - Classement : 458" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      Une chambre, au rez-de-chaussée, avec une grande cuisine au même étage. U n parquet qui est dans un état corect, une chmabre plutôt agréable, surtout en été quand le soleil éclaire le matin.
+&lt;small&gt;Pauline Lambert, 2011&lt;/small&gt;&lt;/blockquote&gt; Occupé par SEVELEV Maksim (sevelev).">
+  <div class="thurne-content">
+    JD122<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 262.5px; width: 35px; height: 52.5px; background-color: darkgreen;"
+     class="label thurne-h "
+     title="JD125 (Très bon état) - Classement : 248" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: darkgreen&#34;&gt;
+        Très bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre en très bon état mais assez sombre.&lt;small&gt;Caroline Bouquet, 2013&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Grand bureau, une bibliothèque, un petit meuble et un grand placard, ainsi qu&#39;un e étagère qui fait le tour du lit, bref y&#39;a de quoi ranger.
+
+Etat de la chambre OK, le coin lavabo sent un  peu bizarre et la peinture y est vieillissante, mais bon il suffit de fermer la porte et hop ! plus de problème.
+
+Isolation phonique vis à vis des autres chambres OK, moins en ce qui concerne le couloir, mais c&#39;est calme.
+
+Peu ensoleillé à cause de l&#39;arbre en face de la fenêtre, mais vue sur le parc de jourdan assez sympa. Une tringle est dispo pour mettre des rideaux
+
+Deux prises électriques et une RJ45.&lt;small&gt;Guillaume Carret, 2012&lt;/small&gt;&lt;/blockquote&gt; Occupé par Carret Guillaume (carret).">
+  <div class="thurne-content">
+    JD125<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 0.0px; left: 315.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD120 (Bon état) - Classement : 251" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre très agréable et en bon état, lumineuse le matin mais un peu sombre. Les volets sont neufs, grand bureau, beaucoup de rangements. Elle a l&#39;avantage d&#39;être au rez-de-chaussée du bâtiment D qui est le seul bâtiment de Jourdan où on trouve une vraie cuisine. Elle est proche de l&#39;entrée du pavillon ce qui donne la modeste impression au printemps d&#39;habiter dans un rez-de-jardin plutôt spacieux. MAIS il y a deux problèmes, un gros et un petit. Le gros c&#39;est qu&#39;il y a un vis-à-vis de malade avec la montée d&#39;escaliers du pavillon d&#39;en-face et le passage des étudiants. Le petit c&#39;est que le lavabo dégage des odeurs étranges. &lt;small&gt;Jeremy Fournel, 2011&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre agreable avec vue sur jardin&lt;small&gt;Alexandr Klioutchnikov, 2008&lt;/small&gt;&lt;/blockquote&gt; Occupé par Zhang Zhiyuan (zzhang).">
+  <div class="thurne-content">
+    JD120<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 131.25px; left: 315.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD123 (Bon état) - Classement : 275" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Rideaux
+      &lt;/span&gt;
+      Chambre calme, donnant sur le jardin de Jourdan, mais assez peu ensoleill_e.&lt;small&gt;Laure Voileau, 2010&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD123<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 367.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    Rez-de-chaussée (10 chambres)
+  </div>
+</div>
+      </div>
+      
+      <div class="row" style="margin-bottom: 10px;">
+	<div class="well" style="margin: auto; width: 420.0px;">
+  <div style="width: 420.0px; height: 210.0px; position: relative;">
+    
+    <div style="top: 0.0px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Sanitaires</div>
+</div>
+    
+    <div style="top: 131.25px; left: 0.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD149 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD149<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 52.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD142 (Bon état) - Classement : 448" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre très agréable, vue dégagée côté est. Fenêtre et volets en très bon état, aspect neuf. Un peu de bruit car mur mitoyen avec la cuisine-salle de bain, mais rien d&#39;insupportable. Peinture un peu écaillée sur certains murs. Beaucoup de rangements, grand bureau. Lavabo assez vieux, surtout le robinet d&#39;eau chaude. Bon chauffage en hiver. La cuisine à côté est un peu petite mais à l&#39;étage du dessous il y a plus de place et un four. Une souris vue une fois dans le couloir.&lt;small&gt;Nina Soleymani, 2013&lt;/small&gt;&lt;/blockquote&gt; Occupé par Soleymani Nina (soleyman).">
+  <div class="thurne-content">
+    JD142<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 52.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD147 (Bon état) - Classement : 377" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Marie-nil Chounet, 2011&lt;/small&gt;&lt;/blockquote&gt; Occupé par Devriès Valentin (vdevries).">
+  <div class="thurne-content">
+    JD147<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD140 (État inconnu) - Classement : 319" rel="popover"
+     data-content=" Occupé par Cornardeau Baptiste (cornarde).">
+  <div class="thurne-content">
+    JD140<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD145 (État inconnu) - Classement : 264" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      La chambre est en bon état mais les équipements collectifs (toilettes, douche, cuisine) sont en permanence dans un état de saleté assez révoltant. &lt;small&gt;Lola Simavonian, 2008&lt;/small&gt;&lt;/blockquote&gt; Occupé par Chanseau Ken (chanseau).">
+  <div class="thurne-content">
+    JD145<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD138 (État inconnu) - Classement : 265" rel="popover"
+     data-content=" Occupé par LIU Shi-Nan (liu).">
+  <div class="thurne-content">
+    JD138<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD143 (État inconnu) - Classement : 374" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD143<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 210.0px; width: 35px; height: 52.5px; background-color: darkred;"
+     class="label thurne-h "
+     title="JD136 (Très mauvais état) - Classement : 247" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: darkred&#34;&gt;
+        Très mauvais état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Les murs sont intégralement desquamés, sans doute à cause d&#39;un ancien dégât des eaux. Le plâtre est cassé en profondeur à l&#39;angle du placard. Impossible de brancher une bouilloire ou un fer à repasser.&lt;small&gt;Antoine Villard, 2011&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD136<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 210.0px; width: 35px; height: 52.5px; background-color: red;"
+     class="label thurne-h "
+     title="JD141 (Mauvais état) - Classement : 253" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: red&#34;&gt;
+        Mauvais état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      chambre très froide et humide. Le plâtre tombe du plafond.
+parquet très abîmé, lattes qui partent.
+le robinet fuit en permanence, &#34;salle de bain&#34; sale et vétuste.
+chambre très sombre car elle ouvre à l&#39;ouest, la fenêtre est cachée par des arbres.
+
+de manière générale, les chambres de jourdan sont assez bien aménagées (rangements etc...). la présence du jardin est agréable. prévoir que les travaux vont reprendre en face en septembre.&lt;small&gt;Anne Lapasset, 2014&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      La peinture tombe du plafond par plaques entières.du coup il y a une espèce de chou-fleur au plafond. Quand une plaque tombe, ce n&#39;est pas dangereux, mais ça peutsurprendre re.&lt;small&gt;Chloe Thomas, 2009&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD141<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 0.0px; left: 262.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD134 (Bon état) - Classement : 326" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre agreable et calme (malgre l&#39;absence d&#39;isolation sonore), ensoleillee le matin. Beaucoup de rangements et un grand bureau. Inconvenients : les plombs sautent facilement, le debit d&#39;eau chaude est un peu faible.&lt;small&gt;Alice Laurenge, 2011&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD134<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD139 (État inconnu) - Classement : 252" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Chloe Thomas, 2008&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD139<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 315.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD132 (État inconnu) - Classement : 379" rel="popover"
+     data-content=" Occupé par Beránková Jana (berankov).">
+  <div class="thurne-content">
+    JD132<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 315.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD137 (Bon état) - Classement : 186" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Charles Dennery, 2010&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: darkgreen&#34;&gt;
+        Très bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      RAS, chambre en très bon état&lt;small&gt;Penelope Spielmann, 2010&lt;/small&gt;&lt;/blockquote&gt; Occupé par Francesco Galeotti Mattia (galeotti).">
+  <div class="thurne-content">
+    JD137<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 0.0px; left: 367.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD130 (État inconnu) - Classement : 268" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JD130<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 367.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    Premier étage (14 chambres)
+  </div>
+</div>
+      </div>
+      
+      <div class="row" style="margin-bottom: 10px;">
+	<div class="well" style="margin: auto; width: 420.0px;">
+  <div style="width: 420.0px; height: 210.0px; position: relative;">
+    
+    <div style="top: 0.0px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Sanitaires</div>
+</div>
+    
+    <div style="top: 131.25px; left: 0.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD160 (Bon état) - Classement : 290" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre au fond du second étage.
+
+Un lit, un grand bureau, deux chaises et un fauteuil à roulettes, une commode à vêtements plus une armoire (la clé est cassée, seul l&#39;un des deux côtés ferme). Deux étagères, une petite et une grande ; une petite table de chevet avec lampe. Du parquet.
+
+Un coin salle de bain avec lavabo et miroir (pas d&#39;armoire), les communs sont juste en face.
+
+Il n&#39;y a plus de lustre pour la lampe au plafond.
+
+Les communs sont réduits (deux cabinets de toilettes, une douche, un sèche-linge, un petit évier, deux plaques et un micro-ondes sans plaque tournante) ; mais fonctionnels. Il y a une grande cuisine au rez-de-chaussée avec un four et de la place, quand on veut vraiment cuisiner.&lt;small&gt;Alix Deleporte, 2013&lt;/small&gt;&lt;/blockquote&gt; Occupé par Deleporte Alix (deleport).">
+  <div class="thurne-content">
+    JD160<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 52.5px; width: 35px; height: 52.5px; background-color: orange;"
+     class="label thurne-h "
+     title="JD156 (État moyen) - Classement : 327" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      D_faut: a cote de la cuisine donc assez bruyant. On entend la machine a laver comme si on y etait !
+Sinon, volets en tr_s mauvais _tat, _ manipuler avec des outils d&#39;archeologues...&lt;small&gt;Deborah Besnard-javaudin, 2010&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD156<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 52.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD159 (État inconnu) - Classement : 347" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      /&lt;small&gt;Helene Koll, 2009&lt;/small&gt;&lt;/blockquote&gt; Occupé par Popova Zhanna (popova).">
+  <div class="thurne-content">
+    JD159<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD154 (État inconnu) - Classement : 444" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      .&lt;small&gt;Marion Salin, 2009&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD154<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 105.0px; width: 35px; height: 52.5px; background-color: orange;"
+     class="label thurne-h "
+     title="JD157 (État moyen) - Classement : 294" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre assez mal fichue : elle a un petit réduit avec un lavabo et un placard. Impossible d&#39;ouvrir deux portes en même temps (le placard, le coin lavabo et la porte de la chambre s&#39;ouvrent exactement au même endroit). Des morceaux de la peinture du plafond se détachent régulièrement. Traces d&#39;humidité autour de la fenêtre. Les volets sont en piteux état. Isolation thermique et sonore : bof bof (j&#39;espère pour le suivant que les travaux seront terminés l&#39;an prochain, sinon ils sont plus efficaces qu&#39;un réveil, à 8h pétantes!).
+Sinon ça reste une chambre vivable si on n&#39;est pas trop difficile.&lt;small&gt;Guilhem Fraysse, 2013&lt;/small&gt;&lt;/blockquote&gt; Occupé par Fraysse Guilhem (fraysse).">
+  <div class="thurne-content">
+    JD157<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD152 (État inconnu) - Classement : 258" rel="popover"
+     data-content=" Occupé par Wang Yilin (ywang).">
+  <div class="thurne-content">
+    JD152<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD155 (État inconnu) - Classement : 262" rel="popover"
+     data-content=" Occupé par Soulier Théodore (soulier).">
+  <div class="thurne-content">
+    JD155<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD150 (État inconnu) - Classement : 318" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      j&#39;aime beaucoup ma chambre!!! ne me la prenez pas!!!&lt;small&gt;Claire Maligot, 2009&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD150<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 210.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD153 (Bon état) - Classement : 231" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Une chambre classique de Jourdan, mal fichue et en bon état.
+Note : les volets sont très vieux.&lt;small&gt;Florent Urrutia, 2012&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Sotaro, 2011&lt;/small&gt;&lt;/blockquote&gt; Occupé par Quetier Jean (quetier).">
+  <div class="thurne-content">
+    JD153<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 0.0px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD148 (État inconnu) - Classement : 271" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Benjamin Faure, 2009&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JD148<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JD151 (État inconnu) - Classement : 279" rel="popover"
+     data-content=" Occupé par Franceschi Sandro (sfrances).">
+  <div class="thurne-content">
+    JD151<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 315.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD146 (Bon état) - Classement : 269" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      L&#39;ambiance à Jourdan est très bonne, calme et pleine de verdure. &lt;small&gt;Shen Lin, 2010&lt;/small&gt;&lt;/blockquote&gt; Occupé par Joliot Sarah (joliot).">
+  <div class="thurne-content">
+    JD146<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 315.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD149 (Bon état) - Classement : 282" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      Point d&#39;eau un peu v_tuste (par rapport _ la chambre), en particulier pas de m_langeur au robinet.&lt;small&gt;Thibaut Verron, 2011&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Julien Fussler, 2009&lt;/small&gt;&lt;/blockquote&gt; Occupé par Lo Bianco Federico (lobianco).">
+  <div class="thurne-content">
+    JD149<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 0.0px; left: 367.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JD144 (Bon état) - Classement : 373" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Tringle pour rideaux. Vieux volets en bois, mais utilisables. Inconvénient : vis-à-vis direct (bâtiment B-C). 
+Note pour le prochain occupant : pour ouvrir la fenêtre, il faut exercer une légère poussée vers le haut sur le bonton, sinon la barre reste bloquée. &lt;small&gt;David Waszek, 2011&lt;/small&gt;&lt;/blockquote&gt; Occupé par Minganti Fabrizio (minganti).">
+  <div class="thurne-content">
+    JD144<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 367.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    Deuxième étage (14 chambres)
+  </div>
+</div>
+      </div>
+      
+    </div>
+    
+    <h2 class="page-header" style="padding-top: 42px;">Pavillons B et C</h2>
+    <div class="thurnes">
+      
+      <div class="row" style="margin-bottom: 10px;">
+	<div class="well" style="margin: auto; width: 840.0px;">
+  <div style="width: 840.0px; height: 210.0px; position: relative;">
+    
+    <div style="top: 0.0px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Sanitaires</div>
+</div>
+    
+    <div style="top: 131.25px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+    <div style="top: 0.0px; left: 52.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC104 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC104<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 52.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JC107 (Bon état) - Classement : 278" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Irenee Frerot, 2010&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC107<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC102 (État inconnu) - Classement : 518" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC102<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC105 (État inconnu) - Classement : 333" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC105<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 157.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JC100 (Bon état) - Classement : 296" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Renaud Detcherry, 2011&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Pierre Verschueren, 2009&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC100<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 131.25px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC103 (État inconnu) - Classement : 260" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Arnaud Perrot, 2007&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC103<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 210.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JC98 (Bon état) - Classement : 475" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Chambre agréable qui donne sur la clinique Montsouris, très calme. La peinture se décolle un peu sur les murs, mais rien d&#39;effrayant ! Pas mal de possibilités de rangement (étagères au dessus du lit, placards etc.)&lt;small&gt;Thibault Miguet, 2012&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Beaucoup de possibilités de rangements (étagères sur le lit, sur le bureau ; table de nuit)
+Parquet
+Donne sur l&#39;Institut mutualiste Montsouris : peu de bruit
+Lavabo séparé du reste de la chambre (avec une porte)
+Table de nuit avec lampe de chevet
+&lt;small&gt;Thibault Miguet, 2012&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC98<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 131.25px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC101 (État inconnu) - Classement : 285" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Pierre Michon, 2009&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC101<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC96 (État inconnu) - Classement : 488" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC96<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC99 (État inconnu) - Classement : 241" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC99<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 315.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC94 (État inconnu) - Classement : 401" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC94<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 315.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC97 (État inconnu) - Classement : 378" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC97<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 367.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC92 (État inconnu) - Classement : 266" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+       
+ Chambre agréable, lumineuse. Mobilier en bon état dans l&#39;ensemble.&lt;small&gt;Farah Cherif-zahar, 2008&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC92<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 367.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC95 (État inconnu) - Classement : 254" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Romain Enriquez, 2008&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC95<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 420.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB64 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB64<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 420.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB67 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB67<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 472.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB62 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB62<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 472.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB65 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB65<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 525.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB60 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB60<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 525.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB63 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB63<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 577.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB58 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB58<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 577.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB61 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB61<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 630.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB56 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB56<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 630.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB59 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB59<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 682.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB54 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB54<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 682.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB57 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB57<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 735.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB52 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB52<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 735.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JB55 (État inconnu)" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JB55<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 787.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Sanitaires</div>
+</div>
+    
+    <div style="top: 131.25px; left: 787.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    Premier étage (28 chambres)
+  </div>
+</div>
+      </div>
+      
+      <div class="row" style="margin-bottom: 10px;">
+	<div class="well" style="margin: auto; width: 420.0px;">
+  <div style="width: 420.0px; height: 210.0px; position: relative;">
+    
+    <div style="top: 0.0px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Cuisine</div>
+</div>
+    
+    <div style="top: 0.0px; left: 52.5px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Douches</div>
+</div>
+    
+    <div style="top: 131.25px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+    <div style="top: 0.0px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC90 (État inconnu) - Classement : 521" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC90<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC93 (État inconnu) - Classement : 527" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC93<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC88 (État inconnu) - Classement : 242" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC88<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 157.5px; width: 35px; height: 52.5px; background-color: orange;"
+     class="label thurne-h "
+     title="JC91 (État moyen) - Classement : 523" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Yu Masaki, 2012&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC91<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC86 (État inconnu) - Classement : 357" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC86<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC89 (État inconnu) - Classement : 477" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Raphaël Blanchier, 2008&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC89<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 262.5px; width: 35px; height: 52.5px; background-color: darkgreen;"
+     class="label thurne-h "
+     title="JC84 (Très bon état) - Classement : 524" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: darkgreen&#34;&gt;
+        Très bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Francois Touchard, 2010&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Ronan Rocle, 2008&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC84<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 131.25px; left: 262.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JC87 (Bon état) - Classement : 396" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Raisa Franca Bastos, 2010&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC87<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 315.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC82 (État inconnu) - Classement : 522" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC82<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 315.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC85 (État inconnu) - Classement : 489" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC85<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 367.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC80 (État inconnu) - Classement : 513" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC80<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 367.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC83 (État inconnu) - Classement : 382" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC83<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    Rez-de-chaussée (12 chambres)
+  </div>
+</div>
+      </div>
+      
+      <div class="row" style="margin-bottom: 10px;">
+	<div class="well" style="margin: auto; width: 420.0px;">
+  <div style="width: 420.0px; height: 210.0px; position: relative;">
+    
+    <div style="top: 0.0px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Sanitaires</div>
+</div>
+    
+    <div style="top: 131.25px; left: 0.0px; width: 35px; height: 52.5px;"
+     class="special vertical label">
+  <div class="thurne-content">Escaliers</div>
+</div>
+    
+    <div style="top: 0.0px; left: 52.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC118 (État inconnu) - Classement : 516" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC118<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 52.5px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JC121 (Bon état)" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      
+Un peu bruyant à cause de la proximité de la cuisine/douches/buanderie/toilettes&lt;small&gt;Olivier Chiquet, 2012&lt;/small&gt;&lt;/blockquote&gt;">
+  <div class="thurne-content">
+    JC121<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 105.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC116 (État inconnu) - Classement : 525" rel="popover"
+     data-content="">
+  <div class="thurne-content">
+    JC116<i class="icon-ok"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 105.0px; width: 35px; height: 52.5px; background-color: red;"
+     class="label thurne-h "
+     title="JC119 (Mauvais état) - Classement : 413" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: red&#34;&gt;
+        Mauvais état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Les volets sont des antiquités rouillées dont des morceaux tombent à chaque utilisation. La prise électrique près du lit ne marche pas et le lavabo est dans une mini pièce (mais pourquoi ???). Les fenêtres n&#39;ont bien sûr pas de double vitrage : on sent le froid irradier lorsque l&#39;on est assis au bureau. Il ne faut pas non plus compter sur l&#39;isolation sonore... A oui et les plombs sautent lorsque l&#39;on utilise un aspirateur.
+Pour les points positifs la chambre est relativement grande et dispose de beaucoup de rangements (étagères au-dessus du lit, bibliothèque, commode et placard/penderie) et d&#39;un grand bureau, le tout pouvant être qualifié de neuf (ce ne sont pas des truc en bois tout pourris). Il y a aussi une belle vue sur la cours de Jourdan.&lt;small&gt;Pierre Quévreux, 2012&lt;/small&gt;&lt;/blockquote&gt; Occupé par Prange Stephane (prange).">
+  <div class="thurne-content">
+    JC119<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 157.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC114 (État inconnu) - Classement : 380" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Li Ma, 2007&lt;/small&gt;&lt;/blockquote&gt; Occupé par Sochacki Thomas (sochacki).">
+  <div class="thurne-content">
+    JC114<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 157.5px; width: 35px; height: 52.5px; background-color: orange;"
+     class="label thurne-h "
+     title="JC117 (État moyen) - Classement : 280" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Faut s&#39;habituer comment bien ouvrir et fermer la fenêtre (la barre ne s&#39;enfonce pas toujours dans les trous d&#39;en haut et en bas)
+Volets en grand manque d&#39;une couche de peinture et pas évidents à bouger
+Mais le papier collé par terre rend le sol plus lisse et on s&#39;accroche dedans moins que dans les autres chambre au sol de bois - plus facile à passer le balai d&#39;ailleurs.
+J&#39;ai pas du occasion d&#39;utiliser la nouvelle cuisine de l&#39;étage, mais ça a l&#39;aire  d&#39;être en ordre. Par contre les douches sont toujours moyen moyen.
+Le site/jardin Jourdan c&#39;est joli, mais les travaux toute l&#39;année avait tendance de gâcher l&#39;effet un peu&lt;small&gt;My-Hai Ha, 2013&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Rideaux
+      &lt;/span&gt;
+      Chambre agréable, lumineuse, avec vue sur le jardin de Jourdan. Lavabo en bon état, murs propres.
+Volets en mauvais état.
+Bruits de porte importants (mais c&#39;est valable pour tout Jourdan).&lt;small&gt;Marianne Tenand, 2011&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Rideaux
+      &lt;/span&gt;
+      Belle vue sur le jardin. Mais le sol est un peu glissant.&lt;small&gt;Yuanmi Chen, 2008&lt;/small&gt;&lt;/blockquote&gt; Occupé par Ha My-Hai (ha).">
+  <div class="thurne-content">
+    JC117<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">3</span>
+</div>
+    
+    <div style="top: 0.0px; left: 210.0px; width: 35px; height: 52.5px; background-color: green;"
+     class="label thurne-h "
+     title="JC112 (Bon état) - Classement : 404" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      Etat correct sauf fenêtre et volets très vétustes qui ferment mal.&lt;small&gt;Alexandre Solans, 2012&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: darkgreen&#34;&gt;
+        Très bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      /&lt;small&gt;Pierre-Yves Bienvenu, 2010&lt;/small&gt;&lt;/blockquote&gt; Occupé par Favreau Laura (favreau).">
+  <div class="thurne-content">
+    JC112<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">2</span>
+</div>
+    
+    <div style="top: 131.25px; left: 210.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC115 (État inconnu) - Classement : 439" rel="popover"
+     data-content=" Occupé par Mogavero Federico (mogavero).">
+  <div class="thurne-content">
+    JC115<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC110 (État inconnu) - Classement : 508" rel="popover"
+     data-content=" Occupé par Domenicucci Jacopo (domenicu).">
+  <div class="thurne-content">
+    JC110<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 131.25px; left: 262.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC113 (État inconnu) - Classement : 339" rel="popover"
+     data-content=" Occupé par Gazaix Léna (gazaix).">
+  <div class="thurne-content">
+    JC113<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+    <div style="top: 0.0px; left: 315.0px; width: 35px; height: 52.5px; background-color: orange;"
+     class="label thurne-h "
+     title="JC108 (État moyen) - Classement : 478" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      Les volets sont vieux, grinçants, il faut insister pour arriver à les fermer.
+À part ça, la chambre est bonne.
+&lt;small&gt;Samuel Bizien, 2011&lt;/small&gt;&lt;/blockquote&gt; Occupé par Marchal Segolene (semarcha).">
+  <div class="thurne-content">
+    JC108<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 131.25px; left: 315.0px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC111 (État inconnu) - Classement : 308" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: darkred&#34;&gt;
+        Très mauvais état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Rideaux
+      &lt;/span&gt;
+      les volets en bois sont tellement vieux qu&#39;ils sont inutilisables. Les rideaux ne protègent pas de la lumière dès 5 heures du matin. Le risque de s&#39;enfoncer des échardes dans les pieds à cause du parquet qui vieillit mal est quotidien. La peinture est dans un état catastrophique sous la fenêtre et tombe en lambeaux dans la salle de bain.&lt;small&gt;Agathe Cage, 2008&lt;/small&gt;&lt;/blockquote&gt; Occupé par Frey Christophe (frey).">
+  <div class="thurne-content">
+    JC111<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">1</span>
+</div>
+    
+    <div style="top: 0.0px; left: 367.5px; width: 35px; height: 52.5px; background-color: orange;"
+     class="label thurne-h "
+     title="JC106 (État moyen) - Classement : 451" rel="popover"
+     data-content="&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      /&lt;small&gt;Rodrigo de Rezende, 2012&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Rideaux
+      &lt;/span&gt;
+      Tr_s calme (a cot_ de bureaux).
+Amm_nag_e avec des meubles _ moi : un lit mezzanine avec bureau int_gr_ dessous, un canap_ clic-clac deux places, des _tag_res, et un frigo.
+Ces meubles sont en excellent _tat, et je suis pr_te _ les revendre d&#39;occasion _ la personne qui prendra cette chambre.
+ Ne pas h_siter _ venir les voir et discuter des prix : dbesnard(at)clipper.ens.fr&lt;small&gt;Deborah Besnard-javaudin, 2011&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: red&#34;&gt;
+        Mauvais état
+      &lt;/span&gt;
+      Fen_tre pleine d&#39;_chardes laissant passer le froid, volets au bord de la rupture, chauffage non r_glage, bruyant.&lt;small&gt;Gwendal Rannou, 2010&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Bon état
+      &lt;/span&gt;
+      /&lt;small&gt;Robin Beaumont, 2009&lt;/small&gt;&lt;/blockquote&gt;&lt;blockquote&gt;
+      &lt;span class=&#34;label&#34; style=&#34;background-color: orange&#34;&gt;
+        État moyen
+      &lt;/span&gt;
+      
+      &lt;span class=&#34;label&#34; style=&#34;background-color: green&#34;&gt;
+        Volets
+      &lt;/span&gt;
+       Les volets sont dans un état déplorable, et la pièce cuisine/douche/WC est très loin. Sinon l&#39;état est convenable.&lt;small&gt;Adrien Georges, 2008&lt;/small&gt;&lt;/blockquote&gt; Occupé par Bimbard Célian (cbimbard).">
+  <div class="thurne-content">
+    JC106<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">5</span>
+</div>
+    
+    <div style="top: 131.25px; left: 367.5px; width: 35px; height: 52.5px; background-color: grey;"
+     class="label thurne-h "
+     title="JC109 (État inconnu) - Classement : 427" rel="popover"
+     data-content=" Occupé par Vincent Perrot (vperrot).">
+  <div class="thurne-content">
+    JC109<i class="icon-user"></i>
+  </div>
+  <span class="badge badge-info">0</span>
+</div>
+    
+  </div>
+  <div style="width: 100%; text-align: center; margin-bottom: -10px; margin-top: 5px">
+    Deuxième étage (14 chambres)
+  </div>
+</div>
+      </div>
+      
+    </div>
+    
+
+    <div style="height: 200px;"></div>
+
+    <!-- Scripts at end of page for faster loading -->
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+      {
+      $('[rel=popover]').popover({'placement': 'bottom'});
+      });
+</script>
+  </body>
+</html>

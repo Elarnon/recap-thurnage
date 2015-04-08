@@ -20,6 +20,26 @@
       {
         padding-top: 42px;
       }
+      .thurne-h, .thurne-w
+      {
+        line-height: 20px;
+        position: absolute;
+        cursor: help;
+      }
+      .special
+      {
+        text-align: center;
+        background-color: darkorchid;
+        cursor: default;
+        line-height: 20px;
+        position: absolute;
+      }
+      .special.vertical .thurne-content {
+        position: absolute;
+        -webkit-transform: rotate(-90deg) translate(-17px, -10px);
+        -moz-transform: rotate(-90deg) translate(-17px, -10px);
+        transform: rotate(-90deg) translate(-17px, -10px);
+      }
       .cuisine
       {
         width: 45px;
@@ -33,43 +53,34 @@
         height: 80px;
         position: absolute;
       }
-      .toilettes .turne-content
+      .toilettes .thurne-content
       {
         position: absolute;
         -webkit-transform: rotate(-90deg) translate(-40px, -15px);
         -moz-transform: rotate(-90deg) translate(-40px, -15px);
         transform: rotate(-90deg) translate(-40px, -15px);
       }
-      .turne-w
+      .mezza
       {
-        width: 80px;
-        height: 20px;
-        line-height: 20px;
-        position: absolute;
-        cursor: help;
+        border: 2px solid #cfa700;
+        box-shadow: 0 0 0.7em #cfa700;
+        border-radius: 4px;
+        margin: -2px;
       }
-      .turne-h 
-      {
-        width: 15px;
-        height: 90px;
-        position: absolute;
-        cursor: help;
-      }
-
-      .turne-h .turne-content
+      .thurne-h .thurne-content
       {
         position: absolute;
-        -webkit-transform: rotate(-90deg) translate(-50px, -16px);
-        -moz-transform: rotate(-90deg) translate(-50px, -16px);
-        transform: rotate(-90deg) translate(-50px, -16px);
+        -webkit-transform: rotate(-90deg) translate(-17px, -17px);
+        -moz-transform: rotate(-90deg) translate(-17px, -17px);
+        transform: rotate(-90deg) translate(-17px, -17px);
       }
-      .turne-w > .badge
+      .thurne-w > .badge
       {
         position: absolute;
         right: 0;
         bottom: 3px;
       }
-      .turne-h > .badge
+      .thurne-h > .badge
       {
         position: absolute;
         right: 0;
@@ -87,17 +98,10 @@
         min-width: 280px;
         max-width: 500px;
       }
-      .mezza
-      {
-        border: 2px solid #cfa700;
-        box-shadow: 0 0 0.7em #cfa700;
-        border-radius: 4px;
-        margin: -2px;
-      }
     </style>
 
     <header>
-    <h1 class="page-header">Informations utiles au thurnage 2014 <small>Montrouge (175 thurnes disponibles)</small></h1>
+    <h1 class="page-header">Informations utiles au thurnage 2014 <small>{{ where }}</small></h1>
     </header>
 
     <div class="navbar navbar-fixed-top">
@@ -128,6 +132,7 @@
     <i class="icon-ok"></i> Chambre disponible au thurnage
     <i class="icon-remove"></i> Chambre non disponible au thurnage
 
+
     <br/><br/>
     <strong>Ces pages ont été crées pour rassembler dans un format
       plus pratique les différentes informations publiquement
@@ -155,10 +160,18 @@
       Merci à Abel Lacabanne pour avoir importé le plan des chambres
       d'Ulm et Jourdan, et merci à Guillaume Bury pour son script
       calculant le rang moyen des thurnes.
-
     <div style="height: 5px;"></div>
 
-    {0}
+    {% for name, floors in buildings %}
+    <h2 class="page-header" style="padding-top: 42px;">{{ name }}</h2>
+    <div class="thurnes">
+      {% for thurnes in floors %}
+      <div class="row" style="margin-bottom: 10px;">
+	{{ thurnes }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
 
     <div style="height: 200px;"></div>
 
